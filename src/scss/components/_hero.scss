@@ -1,0 +1,142 @@
+.hero {
+  width: 100%;
+  height: auto;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 41px;
+    justify-content: center;
+    align-items: center;
+
+    @include small-tablet {
+      padding-top: 15px;
+    }
+  }
+
+  &__title {
+    color: var(--white-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    @include small-tablet {
+      font-size: 40px;
+    }
+
+    @include small-tablet {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  &__btn {
+    margin-top: 34px;
+    width: 342px;
+    height: 80px;
+
+    @include mobile {
+      width: 300px;
+      height: 70px;
+    }
+  }
+
+  &__play {
+    margin-top: 9px;
+    position: relative;
+    z-index: 1;
+    width: 886px;
+    height: 467px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.25);
+
+    @include small-tablet {
+      width: 90%;
+      height: 400px;
+    }
+
+    @include mobile {
+      width: 100%;
+      height: 250px;
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backdrop-filter: blur(4px);
+      z-index: 1;
+      border-radius: 20px;
+      background: rgba(43, 4, 41, 0.44);
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #FC7BFF;
+      filter: blur(15px);
+      border-radius: 120px;
+      z-index: -1;
+    }
+
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      border-radius: 20px;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    &-demo {
+      z-index: 2;
+      width: 210px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.3);
+      border: 2px solid var(--white-color);
+      color: var(--white-color);
+
+      @include mobile {
+        width: 170px;
+        height: 50px;
+      }
+    }
+
+    &-money {
+      z-index: 2;
+      width: 210px;
+      height: 60px;
+      background: #27032B;
+      border: 1px solid var(--white-color);
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.25);
+      color: var(--white-color);
+
+      @include mobile {
+        width: 170px;
+        height: 50px;
+      }
+    }
+  }
+}

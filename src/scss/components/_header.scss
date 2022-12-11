@@ -1,0 +1,89 @@
+.header {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  background: rgba(42, 4, 43, 0.51);
+
+  @include small-tablet {
+    margin-top: 60px;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 31px;
+    padding-bottom: 31px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 15px;
+      padding-top: 60px;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    left: 0;
+    width: 406px;
+    height: 142px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    pointer-events: none;
+
+    @include small-tablet {
+      width: 300px;
+      top: -76px;
+    }
+  }
+
+  &__jackpot {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 16px 30px;
+    filter: drop-shadow(0px 0px 10px #101138);
+    background: #561157;
+    border-radius: 10px;
+
+    @include small-tablet {
+      padding: 16px 15px;
+    }
+
+    &-star {
+      width: 26px;
+      height: 26px;
+      fill: var(--star-color);
+      margin-right: 11px;
+
+      @include small-tablet {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &-title {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-transform: uppercase;
+      color: var(--white-color);
+    }
+  }
+
+  &__play {
+    width: 210px;
+    height: 60px;
+  }
+}

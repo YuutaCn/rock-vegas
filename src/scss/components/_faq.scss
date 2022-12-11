@@ -1,0 +1,132 @@
+.faq {
+  width: 100%;
+
+  &__contaier {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-top: 55px;
+    margin-bottom: 30px;
+    color: var(--white-color);
+  }
+
+  &__drop {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 30px 0px 30px 35px;
+    gap: 40px;
+    background: rgba(253, 255, 228, 0.20);
+    border-radius: 30px;
+    border: 3px solid #E85EFF;
+    cursor: pointer;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 45px;
+    border-bottom-left-radius: 10px;
+
+    @include small-tablet {
+      padding: 15px 10px;
+      gap: 20px;
+    }
+
+    @include mobile {
+      gap: 15px;
+    }
+
+    &.drop--active {
+
+      & .faq__drop {
+
+        &-btn::after {
+          transform: rotate(90deg);
+        }
+
+        &-down {
+          gap: 12px;
+        }
+
+        &-down_text {
+          height: auto;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    &-btn {
+      position: relative;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border: solid 2px #E85EFF;
+      border-radius: 50%;
+
+      @include small-tablet {
+        width: 25px;
+        height: 25px;
+        margin-top: 3px;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        display: flex;
+        width: 15px;
+        height: 2px;
+        border-radius: 2px;
+        background: #E85EFF;
+        transition: transform .25s var(--default-cubic);
+
+        @include small-tablet {
+          width: 60%;
+        }
+      }
+    }
+
+    &-down {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &_title {
+        margin-top: 4px;
+        color: var(--white-color);
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      &_text {
+        opacity: 0;
+        visibility: hidden;
+        width: 956px;
+        height: 0px;
+        color: var(--white-color);
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        transition: opacity 0s var(--default-cubic),
+          visibility 0s var(--default-cubic),
+          height .25s var(--default-cubic);
+
+        @include tablet {
+          width: auto;
+        }
+      }
+    }
+  }
+}

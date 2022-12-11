@@ -1,0 +1,237 @@
+.tips {
+  width: 100%;
+
+  &__container {
+    margin-top: 30px;
+  }
+
+  &__title {
+    color: var(--white-color);
+  }
+
+  &__text {
+    margin-top: 20px;
+    color: var(--white-color);
+  }
+
+  & ul {
+    color: var(--white-color);
+    margin-left: 60px;
+    margin-top: 20px;
+  }
+
+  &__play {
+    margin-top: 30px;
+    width: 206px;
+    height: 67px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 30px rgba(112, 0, 255, 0.51);
+    color: var(--white-color);
+  }
+
+  & .best {
+    margin-top: 37px;
+    width: 100%;
+
+    &__title {
+      color: var(--white-color);
+    }
+
+    & .cards-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      & .card {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        background: linear-gradient(180deg, rgba(202, 160, 255, 0.258) 27.6%, rgba(38, 0, 75, 0.3) 100%);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-top-left-radius: 45px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 45px;
+        border-bottom-left-radius: 10px;
+
+        @include mobile {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        &__left {
+          background: linear-gradient(180deg, rgba(255, 106, 240, 0.15) 10.58%, rgba(222, 79, 191, 0.57) 55.29%, rgba(255, 115, 233, 0.13) 100%);
+          box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
+          border-top-left-radius: 45px;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 45px;
+          border-bottom-left-radius: 10px;
+          padding: 10px 33px 15px 43px;
+
+          @include small-tablet {
+            padding: 10px;
+          }
+
+          @include mobile {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          &-logo {
+            width: 188px;
+            height: 63px;
+            object-fit: contain;
+            object-position: 0;
+
+            @include small-tablet {
+              width: 150px;
+              object-position: center;
+            }
+          }
+
+          &-rate {
+            margin-top: 26px;
+            position: relative;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FEFFFD;
+            text-transform: capitalize;
+
+            @include mobile {
+              width: 40%;
+              text-align: center;
+            }
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: -10px;
+              left: 0;
+              width: 80%;
+              height: 3px;
+              border-radius: 30px;
+              background: linear-gradient(270deg, rgba(255, 253, 198, 0) 4.52%, rgba(255, 254, 194, 0.3) 50.47%, #feffcc4d 95.48%);
+
+              @include mobile {
+                background: linear-gradient(90deg, rgba(254,255,204,0) 0%, rgba(254,255,204,.3) 40%, rgba(254,255,204,.3) 60%, rgba(254,255,204,0) 100%);
+                width: 100%;
+              }
+            }
+
+            & span {
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 18px;
+            }
+          }
+
+        }
+
+        &__center {
+          width: 448px;
+          margin-top: 22px;
+          display: flex;
+          flex-direction: column;
+          gap: 44px;
+
+          @include small-tablet {
+            width: 350px;
+            gap: 20px;
+          }
+
+          @include mobile {
+            width: 90%;
+          }
+
+          &-title {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 28px;
+            color: #E177D7;
+
+            @include small-tablet {
+              font-size: 20px;
+            }
+
+            @include mobile {
+              text-align: center;
+            }
+          }
+
+          & .pay {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 8px;
+            row-gap: 12px;
+
+            @include mobile {
+              justify-content: center;
+            }
+
+            &__img {
+              width: auto;
+              height: 21px;
+              object-fit: contain;
+
+              @include small-tablet {
+                height: 18px;
+              }
+            }
+          }
+        }
+
+        &__right {
+          margin-right: 50px;
+          margin-top: 20px;
+
+          @include small-tablet {
+            margin-right: 0;
+            margin-top: 10px;
+          }
+
+          @include mobile {
+            margin-top: 20px;
+          }
+
+          &-play {
+            width: 146px;
+            height: 51px;
+            color: var(--white-color);
+            box-shadow: 0px 0px 30px rgba(112, 0, 255, 0.51);
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.025em;
+          }
+
+          &-demo {
+            margin-top: 18px;
+            width: 146px;
+            height: 51px;
+            color: var(--white-color);
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.025em;
+            border: 1px solid #FFFFFF;
+
+          }
+        }
+      }
+    }
+  }
+}

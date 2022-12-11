@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="el-GR" class="page">
+@include('partials/head.html',{
+  'title':'Rock Vegas Slot'
+})
+<body class="page__body">
+  <div class="site-container">
+    <div class="background">
+      <picture>
+        <source srcset="img/hero_bg.avif" type="image/avif">
+        <source srcset="img/hero_bg.webp" type="image/webp">
+        <img src="img/hero_bg.png" class="image background__img" width="1440" height="1000" alt="background">
+      </picture>
+    </div>
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/hero.html')
+      @include('partials/bonus.html')
+      @include('partials/review.html')
+      @include('partials/screen.html')
+      @include('partials/htp.html')
+      @include('partials/tips.html')
+      @include('partials/faq.html')
+    </main>
+    @include('partials/footer.html')
+    @include('partials/modal.html')
+    <a class="to-top" href="#" id="to-top" data-scroll>
+      <img loading="lazy" src="img/svg/arrow.svg" class="image" width="28" height="16" alt="go to up">
+    </a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+.to-top {
+  position: fixed;
+  z-index: 9999;
+  right: 38px;
+  bottom: 104px;
+  width: 97px;
+  height: 97px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--white-color);
+  border-radius: 50%;
+  background: #27032B;
+  overflow: hidden;
+  box-shadow: 2px 10px 20px rgba(255, 255, 255, 0.13);
+  transform: translateX(300%) scale(0.7);
+  transition: transform 250ms var(--default-cubic),
+    border 250ms var(--default-cubic),
+    background .25s var(--default-cubic);
+
+  @include tablet {
+    width: 80px;
+    height: 80px;
+    right: 15px;
+    bottom: 100px;
+  }
+
+  @include mobile {
+    width: 70px;
+    height: 70px;
+  }
+
+  &:hover {
+    background: #27032B00;
+    border: solid 2px var(--white-color);
+
+    & svg {
+      fill: var(--white-color);
+    }
+  }
+
+  &.to-top--show {
+    transform: translateX(0) scale(1);
+  }
+
+  &__svg {
+    position: relative;
+    width: 39.5px;
+    fill: var(--white-color);
+    transition: fill 250ms var(--default-cubic);
+
+    @include tablet {
+      width: 50%;
+      height: auto;
+    }
+  }
+}
